@@ -92,7 +92,7 @@ public class StudentManagementApp {
 
     public StudentManagementApp() {
         sms = new StudentManagementSystem();
-        frame = new JFrame("project.Student Management System");
+        frame = new JFrame("Student Management System");
         frame.setSize(500, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
@@ -104,8 +104,8 @@ public class StudentManagementApp {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(2, 3));
 
-        JButton addButton = new JButton("Add project.Student");
-        JButton removeButton = new JButton("Remove project.Student");
+        JButton addButton = new JButton("Add Student");
+        JButton removeButton = new JButton("Remove Student");
         JButton displayButton = new JButton("Display Students");
 
         addButton.addActionListener(e -> addStudent());
@@ -127,7 +127,7 @@ public class StudentManagementApp {
         String email = JOptionPane.showInputDialog("Enter Email:");
         if (name != null && rollNumber != null && grade != null && email != null) {
             sms.addStudent(new Student(name, rollNumber, grade, email));
-            JOptionPane.showMessageDialog(frame, "project.Student added successfully!");
+            JOptionPane.showMessageDialog(frame, "Student added successfully!");
         }
     }
 
@@ -135,7 +135,7 @@ public class StudentManagementApp {
         String rollNumber = JOptionPane.showInputDialog("Enter Roll Number to Remove:");
         if (rollNumber != null) {
             sms.removeStudent(rollNumber);
-            JOptionPane.showMessageDialog(frame, "project.Student removed successfully!");
+            JOptionPane.showMessageDialog(frame, "Student removed successfully!");
         }
     }
 
